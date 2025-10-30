@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>予約カレンダー</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="loading" class="loading-overlay">
+    <div class="spinner"></div>
+    <div class="loading-text">予約一覧を読み込み中...</div>
+  </div>
+
+    <div id="login-box" class="login-overlay">
+    <div class="login-dialog">
+      <label for="password">パスワード:</label>
+      <input type="password" id="password" />
+      <button onclick="checkPassword()">ログイン</button>
+      <div id="login-error" class="login-error"></div>
+    </div>
+  </div>  
+
+ 
+  <div id="calendar"></div>
+  <script src="script.js"></script>
+</body>
+</html>

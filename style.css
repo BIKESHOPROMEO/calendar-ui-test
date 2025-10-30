@@ -1,0 +1,294 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 20px 20px;
+  color: #333;
+}
+
+#calendar {
+  width: 95%;
+  margin: 0 auto;     /* ← 中央寄せ！ */
+  padding: 20px 20px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  margin-bottom: 4px;
+  gap: 1px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr)); /* ← minmaxで誤差防止 */
+  gap: 1px;
+  margin: 0 auto;
+  width: 100%;
+  min-width: 100%;
+}
+
+.calendar-header button {
+  padding: 10px 14px;
+  font-size: 1.8rem;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.fuka-button {
+  background-color: #e53935;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  margin-right: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.fuka-button:hover {
+  background-color: #c62828;
+}
+
+.calendar-header button:hover {
+  background-color: #d0d0d0;
+}
+
+.calendar-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.calendar-cell {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 8px;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.calendar-cell.other-month .calendar-day {
+  color: #bbb;
+}
+.calendar-cell.other-month {
+  background-color: #f5f5f5;
+}
+
+.calendar-day {
+  font-weight: bold;
+  margin-bottom: 6px;
+  font-size: 1.4rem;
+}
+
+.calendar-content {
+  font-size: 0.9rem;
+  color: #555;
+  align-self: flex-start;
+}
+
+.calendar-entry {
+  padding: 4px;
+  margin-bottom: 4px;
+  border-radius: 4px;
+  word-break: break-word;
+}
+
+.entry-top {
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.entry-bottom {
+  font-size: 1em;
+  color: #555;
+}
+
+.no-schedule {
+  color: #aaa;
+  font-style: italic;
+}
+
+@media screen and (max-width: 600px) {
+  .calendar-grid {
+    padding: 0 8px;
+  }
+
+  .calendar-cell {
+    min-height: 100px;
+  }
+
+  .calendar-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+.calendar-day.holiday {
+  color: red;
+  font-weight: bold;
+}
+
+.calendar-cell.holiday .calendar-day {
+  color: red !important;
+}
+
+.today-highlight {
+  background-color: #fff9c4; /* 薄い黄色 */
+  border: 1px solid #f0e68c;
+}
+
+.calendar-cell.holiday.today-highlight {
+  background-color: #ffdca8; /* ← 祝日＋今日の色（オレンジ系など） */
+  border: 2px solid #ffa500;
+}
+
+.weekday-label {
+  padding: 6px 0;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.weekday-label.sunday {
+  color: red;
+}
+
+.weekday-label.saturday {
+  color: blue;
+}
+
+.calendar-cell.sunday .calendar-day {
+  color: red;
+}
+
+.calendar-cell.saturday .calendar-day {
+  color: blue;
+}
+
+@media screen and (max-width: 600px) {
+  .calendar-day {
+    font-size: 1.1rem;
+  }
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  display: none; /* ← 最初は非表示 */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #ccc;
+  border-top: 4px solid #2196F3;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.loading-text {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #333;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.login-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(240, 240, 240, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.login-dialog {
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.login-dialog input {
+  padding: 8px;
+  font-size: 1rem;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  width: 200px;
+}
+
+.login-dialog button {
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: auto; /* ← これでボタンが内容に合わせて縮む */
+  min-width: 120px; /* ← 最低サイズだけ確保 */
+}
+
+.login-error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+.task-first {
+  background-color: #ffcccc; /* 赤っぽい */
+  border-left: 4px solid red;
+}
+
+.task-6m {
+  background-color: #ffe0f0; /* ピンク */
+  border-left: 4px solid pink;
+}
+
+.task-12m {
+  background-color: #e0f0ff; /* 青系 */
+  border-left: 4px solid #3399ff;
+}
+
+.task-tire {
+  background-color: #e0ffff; /* 水色 */
+  border-left: 4px solid #00cccc;
+}
+
+.task-oil {
+  background-color: #f5f5dc; /* ベージュ */
+  border-left: 4px solid #d2b48c;
+}
+
+.task-other {
+  background-color: #eeeeee; /* グレー */
+  border-left: 4px solid #999;
+}
+
