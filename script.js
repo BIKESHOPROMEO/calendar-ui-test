@@ -1,7 +1,7 @@
 function checkPassword() {
   const input = document.getElementById('password').value;
   const errorEl = document.getElementById('login-error');
-  const correctPassword = 'tamatama6630';
+  const correctPassword = 'romeotest';
 
   if (input === correctPassword) {
     localStorage.setItem('isLoggedIn', 'true'); // ← ログイン状態を保存！
