@@ -79,6 +79,7 @@ function getSchedule(dateStr) {
 }
 
 function renderCalendar(date) {
+  currentDate = new Date(date);
   console.time("描写開始");
   const calendarEl = document.getElementById('calendar');
   calendarEl.innerHTML = ''; // 初期化
@@ -97,6 +98,7 @@ function renderCalendar(date) {
   const prevBtn = document.createElement('button');
   prevBtn.textContent = '← 前月';
   prevBtn.onclick = () => {
+    currentDate.setDate(1);  //一旦1日に戻す
     currentDate.setMonth(currentDate.getMonth() - 1);
     renderCalendar(currentDate);
   };
@@ -104,12 +106,13 @@ function renderCalendar(date) {
   const nextBtn = document.createElement('button');
   nextBtn.textContent = '翌月 →';
   nextBtn.onclick = () => {
+    currentDate.setDate(1);  //一旦1日に戻す
     currentDate.setMonth(currentDate.getMonth() + 1);
     renderCalendar(currentDate);
   };
 
   const title = document.createElement('div');
-  title.textContent = `${year}年${month + 1}月`;
+  title.textContent = `${date.getFullYear()}年${date.getMonth() + 1}月`;
   title.className = 'calendar-title';
 
   const fukaBtn = document.createElement('button');
