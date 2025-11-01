@@ -6,7 +6,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const response = await fetch(`${GAS_URL}?action=holidays`);
+    const response = await fetch(`${GAS_URL}?action=holidaystest`);
     const text = await response.text();
 
     try {
