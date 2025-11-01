@@ -118,7 +118,7 @@ function renderCalendar(date) {
   const fukaBtn = document.createElement('button');
   fukaBtn.textContent = '【予約不可登録】';
   fukaBtn.onclick = () => {
-    window.open('https://tamfuka-form.vercel.app/', '_blank');
+    window.open('https://tamafuka-form-test.vercel.app/', '_blank');
   };
   fukaBtn.className = 'fuka-button';
 
@@ -130,7 +130,7 @@ function renderCalendar(date) {
   const mm = String(today.getMonth() + 1).padStart(2, "0");
   const dd = String(today.getDate()).padStart(2, "0");
   const dateStr = `${yyyy}-${mm}-${dd}`;
-  const url = new URL("https://tentoyoyakutama.vercel.app/");
+  const url = new URL("https://tentoyoyakutama-test.vercel.app/");
   url.searchParams.set("date", dateStr);
   window.location.href = url.toString();
 };
