@@ -196,7 +196,7 @@ for (let i = startWeekday - 1; i >= 0; i--) {
       case 'オイル交換': entry.classList.add('task-oil'); break;
       case 'その他修理': entry.classList.add('task-other'); break;
 }
-      entry.innerHTML = `<div class="entry-top"><strong>${item.time} ${item.customer} 様 <br>${item.car}<br>${item.task}</strong></div><div class="entry-bottom"><span> TEL：${item.phone} / ${item.email} <br>【備考】${item.note}</span></div>`;
+      entry.innerHTML = `<div class="entry-top"><strong>${item.time} ${item.customer} 様 <br>【 ${item.car} 】<br>${item.task}</strong></div><div class="entry-bottom"><span> TEL：${item.phone}<br>${item.email} <br>【備考】${item.note}</span></div>`;
       content.appendChild(entry);
     });
   } else {
@@ -244,7 +244,7 @@ for (let day = 1; day <= daysInMonth; day++) {
       case 'オイル交換': entry.classList.add('task-oil'); break;
       case 'その他修理': entry.classList.add('task-other'); break;
 }
-      entry.innerHTML = `<div class="entry-top"><strong>${item.time} ${item.customer} 様 <br>${item.car}<br>${item.task}</strong></div><div class="entry-bottom"><span> TEL：${item.phone} / ${item.email} <br>【備考】${item.note}</span></div>`;
+      entry.innerHTML = `<div class="entry-top"><strong>${item.time} ${item.customer} 様 <br>【 ${item.car} 】<br>${item.task}</strong></div><div class="entry-bottom"><span> TEL：${item.phone}<br>${item.email} <br>【備考】${item.note}</span></div>`;
       content.appendChild(entry);
     });
   } else {
@@ -300,7 +300,7 @@ for (let i = 1; i <= blanks; i++) {
       case 'オイル交換': entry.classList.add('task-oil'); break;
       case 'その他修理': entry.classList.add('task-other'); break;
 }
-      entry.innerHTML = `<div class="entry-top"><strong>${item.time} ${item.customer} 様 <br>${item.car}<br>${item.task}</strong></div><div class="entry-bottom"><span> TEL：${item.phone} / ${item.email} <br>【備考】${item.note}</span></div>`;
+      entry.innerHTML = `<div class="entry-top"><strong>${item.time} ${item.customer} 様 <br>【 ${item.car} 】<br>${item.task}</strong></div><div class="entry-bottom"><span> TEL：${item.phone}<br>${item.email} <br>【備考】${item.note}</span></div>`;
       content.appendChild(entry);
     });
   } else {
