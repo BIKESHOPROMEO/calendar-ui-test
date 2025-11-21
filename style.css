@@ -18,7 +18,7 @@ body {
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  width: 98%;
+  width: 95%;
   top: 0;
   left: 50%;
   right: auto;
@@ -34,7 +34,7 @@ body {
 
 .calendar-weekdays {
   display: grid;
-  width: 98%;
+  width: 95%;
   grid-template-columns: repeat(7, minmax(0, 1fr));
   gap: 1px;
   position: fixed;
