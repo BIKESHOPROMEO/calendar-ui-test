@@ -326,5 +326,10 @@ for (let i = 1; i <= blanks; i++) {
 
   calendarEl.appendChild(grid);
   console.timeEnd("描写開始");
+
+  const thisWeekEl = document.getElementById('this-week');
+  if (thisWeekEl) {
+    thisWeekEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 }
 

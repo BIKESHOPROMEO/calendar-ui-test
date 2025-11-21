@@ -23,15 +23,5 @@
  
   <div id="calendar"></div>
   <script src="script.js"></script>
-  <script>
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      const thisWeekEl = document.getElementById('this-week');
-      if (thisWeekEl) {
-        thisWeekEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }, 300); // 0.3秒待ってから探す
-  });
-</script>
 </body>
 </html>
