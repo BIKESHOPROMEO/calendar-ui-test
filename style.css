@@ -27,6 +27,7 @@ body {
   background-color: #f9f9f9;
   z-index: 1000;
   padding: 10px 40px 10px 40px;
+  box-sizing: border-box;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin-bottom: 0;
 }
@@ -44,6 +45,7 @@ body {
   margin: 0 auto;
   background-color: #f9f9f9;
   z-index: 999;
+  box-sizing: border-box;
   padding: 0 20px;
   margin-bottom: 0;
 }
