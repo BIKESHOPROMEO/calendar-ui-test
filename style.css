@@ -9,8 +9,8 @@ body {
 #calendar {
   width: 98%;
   margin: 0 auto;     /* ← 中央寄せ！ */
-  padding: 20px 20px;
-  padding-top: 120px;
+  padding: 20px 0;
+  padding-top: 100px;
 }
 
 .calendar-header {
@@ -26,7 +26,7 @@ body {
   transform: translateX(-50%);
   background-color: #f9f9f9;
   z-index: 1000;
-  padding: 10px 10px 10px 10px;
+  padding: 10px 20px 10px 20px;
   box-sizing: border-box;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin-bottom: 0;
