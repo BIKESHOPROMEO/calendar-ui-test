@@ -7,7 +7,7 @@ body {
 }
 
 #calendar {
-  width: 100%;
+  width: 98%;
   margin: 0 auto;     /* ← 中央寄せ！ */
   padding: 20px 20px;
   padding-top: 120px;
