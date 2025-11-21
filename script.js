@@ -328,9 +328,14 @@ for (let i = 1; i <= blanks; i++) {
   console.timeEnd("描写開始");
 
   if (shoudScroll){
-  const thisWeekEl = document.getElementById('this-week');
-  if (thisWeekEl) {
-    thisWeekEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const todayCell = document.querySelector('.calendar-cell.today-highlight');
+    if (todayCell) {
+      const offset = 100;
+      const targetPosition = todayCell.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });    
   }
 }
 }
