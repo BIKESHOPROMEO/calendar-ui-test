@@ -27,7 +27,7 @@ function showCalendar() {
   showLoading();
   Promise.all([loadSchedule(), loadHolidays()])
     .then(() => {      
-      renderCalendar(currentDate);
+      renderCalendar(currentDate, true);
     })
     .finally(() => {
       hideLoading();
@@ -78,7 +78,7 @@ function getSchedule(dateStr) {
   return items.sort((a, b) => a.time.localeCompare(b.time));
 }
 
-function renderCalendar(date) {
+function renderCalendar(date, shoudScroll = false) {
   currentDate = new Date(date);
   console.time("描写開始");
   const calendarEl = document.getElementById('calendar');
@@ -327,9 +327,11 @@ for (let i = 1; i <= blanks; i++) {
   calendarEl.appendChild(grid);
   console.timeEnd("描写開始");
 
+  if (shoudScroll){
   const thisWeekEl = document.getElementById('this-week');
   if (thisWeekEl) {
     thisWeekEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
+}
 }
 
