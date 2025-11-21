@@ -329,7 +329,7 @@ for (let i = 1; i <= blanks; i++) {
 
   const thisWeekEl = document.getElementById('this-week');
   if (thisWeekEl) {
-    thisWeekEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    thisWeekEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
 }
 
