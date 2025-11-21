@@ -41,6 +41,7 @@ body {
   top: 75px;
   left: 0;
   right: 0;
+  margin: 0 auto;
   background-color: #f9f9f9;
   z-index: 999;
   padding: 0 20px;
