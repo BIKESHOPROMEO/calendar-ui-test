@@ -20,7 +20,7 @@ body {
   /*margin-bottom: 20px;*/
 
   position: fixed;
-  width: 98%;
+  width: 95%;
   top: 0;
   left: 25px;
   right: 20px;
@@ -33,7 +33,7 @@ body {
 
 .calendar-weekdays {
   display: grid;
-  width: 98%;
+  width: 95%;
   grid-template-columns: repeat(7, minmax(0, 1fr));
   /*margin-bottom: 4px;*/
   gap: 1px;
