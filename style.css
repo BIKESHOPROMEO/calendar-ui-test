@@ -7,8 +7,8 @@ body {
 }
 
 #calendar {
-  width: auto;
-  margin: 0 20px;     /* ← 中央寄せ！ */
+  width: 98%;
+  margin: 0 auto;     /* ← 中央寄せ！ */
   padding: 0;
   padding-top: 100px;
 }
