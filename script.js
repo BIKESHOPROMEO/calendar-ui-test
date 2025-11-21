@@ -210,16 +210,27 @@ for (let i = startWeekday - 1; i >= 0; i--) {
 }
 
 for (let day = 1; day <= daysInMonth; day++) {
+  const weekStart = new Date();
+    weekStart.setDate(weekStart.getDate() - weekStart.getDay()); // 今週の日曜
+    weekStart.setHours(0, 0, 0, 0);
+  const weekEnd = new Date();
+    weekEnd.setDate(weekEnd.getDate() + (6 - weekEnd.getDay())); // 今週の土曜
+    weekEnd.setHours(23, 59, 59, 999);
   const cellDate = new Date(year, month, day);
+    cellDate.setHours(12, 0, 0, 0); // 時間を揃えて比較しやすくする
+  const isThisWeek = cellDate >= weekStart && cellDate <= weekEnd;
+  const dayOfWeek = cellDate.getDay();
+  const cell = document.createElement('div');
+    cell.className = 'calendar-cell';
+if (isThisWeek && dayOfWeek === 0) {
+  cell.setAttribute('id', 'this-week'); // 今週の日曜セルにidを付ける
+}  
   const key = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
   const isHoliday = holidayData.holidays?.includes(key);
   const items = getSchedule(key);
   const today = new Date();
-  const isToday = cellDate.toDateString() === today.toDateString();
-
-  const cell = document.createElement('div');
-  cell.className = 'calendar-cell';
-  const dayOfWeek = cellDate.getDay();
+  const isToday = cellDate.toDateString() === today.toDateString();  
+  cell.className = 'calendar-cell';  
   if (dayOfWeek === 0) cell.classList.add('sunday');
   if (dayOfWeek === 6) cell.classList.add('saturday');
   if (isHoliday) cell.classList.add('holiday');

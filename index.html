@@ -23,5 +23,13 @@
  
   <div id="calendar"></div>
   <script src="script.js"></script>
+  <script>
+    window.addEventListener('load', () => {
+      const thisWeekEl = document.getElementById('this-week');
+      if (thisWeekEl) {
+        thisWeekEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  </script>
 </body>
 </html>
