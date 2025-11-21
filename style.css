@@ -17,13 +17,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /*margin-bottom: 20px;*/
-
   position: fixed;
   width: 98%;
   top: 0;
-  left: 0;
-  right: 0;
+  left: 50%;
+  right: auto;
+  margin: 0;
+  transform: translateX(-50%);
   background-color: #f9f9f9;
   z-index: 1000;
   padding: 10px 40px 10px 40px;
@@ -36,13 +36,13 @@ body {
   display: grid;
   width: 98%;
   grid-template-columns: repeat(7, minmax(0, 1fr));
-  /*margin-bottom: 4px;*/
   gap: 1px;
   position: fixed;
   top: 75px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
+  left: 50%;
+  right: auto;
+  margin: 0;
+  transform: translateX(-50%);
   background-color: #f9f9f9;
   z-index: 999;
   box-sizing: border-box;
