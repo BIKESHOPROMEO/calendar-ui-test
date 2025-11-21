@@ -20,13 +20,13 @@ body {
   position: fixed;
   width: 98%;
   top: 0;
-  left: 20px;
-  right: 20px;
+  left: 50%;
+  right: auto;
   margin: 0;
-  transform: none;
+  transform: translateX(-50%);
   background-color: #f9f9f9;
   z-index: 1000;
-  padding: 10px 10px 10px 10px;
+  padding: 10px 0;
   box-sizing: border-box;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin-bottom: 0;
@@ -34,19 +34,19 @@ body {
 
 .calendar-weekdays {
   display: grid;
-  width: auto;
+  width: 98%;
   grid-template-columns: repeat(7, minmax(0, 1fr));
   gap: 1px;
   position: fixed;
   top: 75px;
-  left: 20px;
-  right: 20px;
+  left: 50%;
+  right: auto;
   margin: 0;
-  transform: none;
+  transform: translateX(-50%);
   background-color: #f9f9f9;
   z-index: 999;
   box-sizing: border-box;
-  padding: 0 0;
+  padding: 0;
   margin-bottom: 0;
 }
 
