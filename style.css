@@ -10,7 +10,7 @@ body {
   width: 95%;
   margin: 0 auto;     /* ← 中央寄せ！ */
   padding: 20px 20px;
-  padding-top: 105px;
+  padding-top: 120px;
 }
 
 .calendar-header {
@@ -36,8 +36,10 @@ body {
   grid-template-columns: repeat(7, minmax(0, 1fr));
   /*margin-bottom: 4px;*/
   gap: 1px;
-  position: sticky;
-  top: 55px;
+  position: fixed;
+  top: 75px;
+  left: 20px;
+  right: 20px;
   background-color: #f9f9f9;
   z-index: 999;
   padding: 0 0;
