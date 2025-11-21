@@ -10,7 +10,7 @@ body {
   width: 95%;
   margin: 0 auto;     /* ← 中央寄せ！ */
   padding: 20px 20px;
-  padding-top: 100px;
+  padding-top: 105px;
 }
 
 .calendar-header {
@@ -21,9 +21,9 @@ body {
 
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
+  left: 20px;
+  right: 20px;
+  width: auto;
   background-color: #f9f9f9;
   z-index: 1000;
   padding: 10px 40px 10px 40px;
@@ -40,7 +40,8 @@ body {
   top: 55px;
   background-color: #f9f9f9;
   z-index: 999;
-  padding: 0 20px;
+  padding: 0 0;
+  margin-bottom: 0;
 }
 
 .calendar-grid {
