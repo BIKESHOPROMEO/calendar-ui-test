@@ -7,9 +7,9 @@ body {
 }
 
 #calendar {
-  width: 98%;
-  margin: 0 auto;     /* ← 中央寄せ！ */
-  padding: 20px 0;
+  width: auto;
+  margin: 0 20px;     /* ← 中央寄せ！ */
+  padding: 0;
   padding-top: 100px;
 }
 
@@ -20,13 +20,13 @@ body {
   position: fixed;
   width: 98%;
   top: 0;
-  left: 50%;
-  right: auto;
+  left: 20px;
+  right: 20px;
   margin: 0;
-  transform: translateX(-50%);
+  transform: none;
   background-color: #f9f9f9;
   z-index: 1000;
-  padding: 10px 20px 10px 20px;
+  padding: 10px 10px 10px 10px;
   box-sizing: border-box;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin-bottom: 0;
@@ -34,19 +34,19 @@ body {
 
 .calendar-weekdays {
   display: grid;
-  width: 98%;
+  width: auto;
   grid-template-columns: repeat(7, minmax(0, 1fr));
   gap: 1px;
   position: fixed;
   top: 75px;
-  left: 50%;
-  right: auto;
+  left: 20px;
+  right: 20px;
   margin: 0;
-  transform: translateX(-50%);
+  transform: none;
   background-color: #f9f9f9;
   z-index: 999;
   box-sizing: border-box;
-  padding: 0 20px;
+  padding: 0 0;
   margin-bottom: 0;
 }
 
