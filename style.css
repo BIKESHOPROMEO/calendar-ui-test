@@ -10,20 +10,37 @@ body {
   width: 95%;
   margin: 0 auto;     /* ← 中央寄せ！ */
   padding: 20px 20px;
+  padding-top: 100px;
 }
 
 .calendar-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  /*margin-bottom: 20px;*/
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #f9f9f9;
+  z-index: 1000;
+  padding: 10px 40px 10px 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0;
 }
 
 .calendar-weekdays {
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
-  margin-bottom: 4px;
+  /*margin-bottom: 4px;*/
   gap: 1px;
+  position: sticky;
+  top: 55px;
+  background-color: #f9f9f9;
+  z-index: 999;
+  padding: 0 20px;
 }
 
 .calendar-grid {
